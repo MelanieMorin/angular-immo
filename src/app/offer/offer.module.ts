@@ -1,20 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { OfferRoutingModule } from './offer-routing.module';
 import { OfferComponent } from './offer.component';
-import { ListComponent } from './list/list.component';
-import { CreateComponent } from './create/create.component';
+import { OfferListComponent } from './offer-list/offer-list.component';
+import { OfferCreateComponent } from './offer-create/offer-create.component';
 
 @NgModule({
   declarations: [
     OfferComponent,
-    ListComponent,
-    CreateComponent
+    OfferListComponent,
+    OfferCreateComponent
   ],
   imports: [
-    BrowserModule,
-    OfferRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [OfferComponent]

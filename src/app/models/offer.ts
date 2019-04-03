@@ -2,6 +2,7 @@ import { Owner } from './owner';
 
 export class Offer {
     constructor(
+        public id: number,
         public address: string,
         public address2: string,
         public postalCode: string,

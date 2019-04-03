@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <h1>Liste des propriétaires</h1>
+
+  <input placeholder="Rechercher" [(ngModel)]="keywords" (input)="search()" type="text" class="form-control" />
+  <br>
+
+  <p *ngIf="keywords != ''">Résultats pour la recherche : {{ keywords }}</p>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>
+          Nom
+        </th>
+        <th>
+          Prénom
+        </th>
+        <th>
+          Date de naissance
+        </th>
+        <th>
+          Adresse
+        </th>
+        <th>
+          Code postal
+        </th>
+        <th>
+          Ville
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let owner of owners">
+        <td>
+          {{owner.lastName.toUpperCase()}}
+        </td>
+        <td>
+          {{owner.firstName}}
+        </td>
+        <td>
+          {{owner.birth}}
+        </td>
+        <td>
+          {{owner.getFullAddress()}}
+        </td>
+        <td>
+          {{owner.postalCode}}
+        </td>
+        <td>
+          {{owner.city}}
+        </td>
+        <td>
+          <button (click)="delete(owner)" class="btn btn-danger">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

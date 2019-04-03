@@ -1,20 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerComponent } from './owner.component';
-import { ListComponent } from './list/list.component';
-import { CreateComponent } from './create/create.component';
+import { OwnerListComponent } from './owner-list/owner-list.component';
+import { OwnerCreateComponent } from './owner-create/owner-create.component';
 
 @NgModule({
   declarations: [
     OwnerComponent,
-    ListComponent,
-    CreateComponent
+    OwnerListComponent,
+    OwnerCreateComponent
   ],
   imports: [
-    BrowserModule,
-    OwnerRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [OwnerComponent]

@@ -1,0 +1,31 @@
+
+<div class="container mt-5">
+  <h1>Ajouter un propriétaire</h1>
+  <form [formGroup]="ownerForm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <input type="text" formControlName="lastName" placeholder="Nom" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="text" formControlName="firstName" placeholder="Prénom" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Date de naissance</label>
+      <input type="date" formControlName="birth" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="text" formControlName="address" placeholder="Adresse : numéro, voie et nom de la voie" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="text" formControlName="address" placeholder="Complément d'adresse : résidence, bâtiment, étage" class="form-control">
+    </div>
+    <div class="form-group row">
+      <div class="col">
+        <input type="text" class="form-control" max="5" placeholder="Code postal">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Ville">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success btn-block">Enregistrer</button>
+  </form>
+</div>
