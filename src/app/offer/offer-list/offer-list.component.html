@@ -1,3 +1,13 @@
-<p>
-  offer-list works!
-</p>
+<div class="container mt-5">
+  <h1>Tous les biens en vente</h1>
+  <div class="row">
+    <div class="col-md-4  mt-5" *ngFor="let offer of offers">
+      <div style="height:200px;background-image:url('https://r-ec.bstatic.com/images/hotel/max1024x768/219/21901960.jpg');background-size: 100%;background-repeat:none;">
+        <h4 class="text-white" style="text-shadow:#000 1px 0 10px;margin:5px">{{offer.title}}</h4>
+        <div class="align-bottom" style="color:red;background-color: yellow">
+            {{offer.surface}}m² - {{offer.price}}€
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,11 +9,11 @@
           <input type="text" formControlName="title" placeholder="Titre de l'annonce" class="form-control">
         </div>
         <div class="form-group">
-          <textarea rows="4" formControlName="description" placeholder="Description" class="form-control"></textarea>
+          <textarea rows="3" formControlName="description" placeholder="Description" class="form-control"></textarea>
         </div>
         <div class="form-group row">
           <div class="col">
-            <label>Surface (mètres carrés, loi Carrez)</label>
+            <label>Surface (m² selon loi Carrez)</label>
             <input type="number" min="0" step="0.1" class="form-control" formControlName="surface">
           </div>
           <div class="col">
@@ -23,12 +23,19 @@
         </div>
         <div class="form-group">
           <select formControlName="owner" class="form-control">
-            <option>Propriétaire actuel</option>
+            <option value="">Propriétaire actuel</option>
           </select>
         </div>
         <div class="form-group">
-          <input type="text" formControlName="firstName" placeholder="Référence" class="form-control">
+          <input type="text" formControlName="ref" placeholder="Référence" class="form-control">
         </div>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" formGroupName="photo" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label">Choisir une photo</label>
+          </div>
+        </div>
+
       </div>
 
       <div class="col-6">
